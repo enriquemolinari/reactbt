@@ -77,9 +77,7 @@ export default class CrearPersona extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:1234/localidades", {
-      //credentials: "include",
-    })
+    fetch("http://localhost:1234/localidades")
       .then((r) => r.json())
       .then((json) => {
         this.setState({

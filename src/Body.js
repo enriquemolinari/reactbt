@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container } from "react-bootstrap";
 import CrearPersona from "./CrearPersona";
-import Personas from "./Personas";
+import PersonasConHooks from "./PersonasConHooks";
 import Welcome from "./Welcome";
 
 export default class Body extends Component {
@@ -15,7 +15,7 @@ export default class Body extends Component {
         {this.props.itemClicked === 0 && <Welcome />}
         {this.props.itemClicked === 1 && <CrearPersona />}
         {this.props.itemClicked === 2 && (
-          <Personas inputValue={this.props.inputValue} />
+          <PersonasConHooks inputValue={this.props.inputValue} />
         )}
       </Container>
     );
